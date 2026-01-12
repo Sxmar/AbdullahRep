@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleet - Elite Limo Service</title>
+    <meta name="description" content="View our luxury limousine fleet - Stretch limos, SUV limousines, party buses, executive sedans. Premium vehicles for weddings, proms, corporate events.">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="templatemo-604-christmas-piano.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <!-- Logo Row -->
+        <div class="header-logo-row">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🚗</span>
+                Elite Limo Servicef
+            </a>
+        </div>
+        <!-- Navigation Row -->
+        <div class="header-nav-row">
+            <div class="nav-container">
+                <div class="nav-decor">
+                    <span class="ornament">⬥</span>
+                    <span>•</span>
+                    <span class="ornament">⬥</span>
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="fleet.html" class="active">Fleet</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-decor">
+                    <span class="ornament">⬥</span>
+                    <span>•</span>
+                    <span class="ornament">⬥</span>
+                </div>
+                <div class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Fleet Section -->
+    <section id="fleet" style="padding-top: 120px;">
+        <div class="section-header">
+            <span class="section-badge">Fleet</span>
+            <h2>Our Luxury Vehicles</h2>
+            <p class="section-desc">Premium limousines for every occasion</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card" data-vehicle="stretch-limo">
+                <div class="feature-icon clickable-car" data-vehicle="stretch-limo">
+                    <img src="images/stretch-limo.jpg" alt="Stretch Limousine" class="limo-image">
+                    <div class="view-gallery-btn">📷 View Gallery</div>
+                </div>
+                <h3>Stretch Limousine</h3>
+                <p>Our flagship vehicle featuring luxury seating for up to 8 passengers, premium sound system, and elegant interior lighting. Perfect for weddings, proms, and special celebrations.</p>
+                <div class="quote-cta"><strong>For a quote call (999) 999-9999</strong></div>
+            </div>
+            <div class="feature-card" data-vehicle="suv-limo">
+                <div class="feature-icon clickable-car" data-vehicle="suv-limo">
+                    <img src="images/suv-limo.jpg" alt="SUV Limousine" class="limo-image">
+                    <div class="view-gallery-btn">📷 View Gallery</div>
+                </div>
+                <h3>SUV Limousine</h3>
+                <p>Spacious and commanding presence with room for up to 14 passengers. Features premium leather seating, climate control, and entertainment systems for group events and corporate travel.</p>
+                <div class="quote-cta"><strong>For a quote call (999) 999-9999</strong></div>
+            </div>
+            <div class="feature-card" data-vehicle="party-bus">
+                <div class="feature-icon clickable-car" data-vehicle="party-bus">
+                    <img src="images/party-bus.jpg" alt="Party Bus" class="limo-image">
+                    <div class="view-gallery-btn">📷 View Gallery</div>
+                </div>
+                <h3>Party Bus</h3>
+                <p>Ultimate party experience on wheels with capacity for 20+ passengers. Complete with dance floor, premium sound system, LED lighting, and full bar setup for unforgettable celebrations.</p>
+                <div class="quote-cta"><strong>For a quote call (999) 999-9999</strong></div>
+            </div>
+            <div class="feature-card" data-vehicle="executive-sedan">
+                <div class="feature-icon clickable-car" data-vehicle="executive-sedan">
+                    <img src="images/executive-sedan.jpg" alt="Executive Sedan" class="limo-image">
+                    <div class="view-gallery-btn">📷 View Gallery</div>
+                </div>
+                <h3>Executive Sedan</h3>
+                <p>Professional and sophisticated transportation for business meetings, airport transfers, and executive travel. Comfortable seating for up to 3 passengers with premium amenities.</p>
+                <div class="quote-cta"><strong>For a quote call (999) 999-9999</strong></div>
+            </div>
+            <div class="feature-card" data-vehicle="classic-limo">
+                <div class="feature-icon clickable-car" data-vehicle="classic-limo">
+                    <img src="images/classic-limo.jpg" alt="Classic Limousine" class="limo-image">
+                    <div class="view-gallery-btn">📷 View Gallery</div>
+                </div>
+                <h3>Classic Limousine</h3>
+                <p>Timeless elegance with traditional styling and luxury appointments. Ideal for formal events, business occasions, and sophisticated transportation needs.</p>
+                <div class="quote-cta"><strong>For a quote call (999) 999-9999</strong></div>
+            </div>
+            <div class="feature-card" data-vehicle="luxury-van">
+                <div class="feature-icon clickable-car" data-vehicle="luxury-van">
+                    <img src="images/luxury-van.jpg" alt="Luxury Van" class="limo-image">
+                    <div class="view-gallery-btn">📷 View Gallery</div>
+                </div>
+                <h3>Luxury Van</h3>
+                <p>Versatile and spacious option for group transportation. Comfortable seating for up to 12 passengers with premium amenities and professional chauffeur service.</p>
+                <div class="quote-cta"><strong>For a quote call (999) 999-9999</strong></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vehicle Gallery Modal -->
+    <div class="vehicle-modal" id="vehicleModal">
+        <div class="vehicle-modal-content">
+            <button class="vehicle-modal-close" id="vehicleModalClose">×</button>
+            <div class="vehicle-modal-header">
+                <h2 id="vehicleTitle">Vehicle Gallery</h2>
+                <div class="vehicle-quote-info">
+                    <div class="quote-phone-display">
+                        <span class="phone-icon">📞</span>
+                        <span>For a quote call: <strong>(999) 999-9999</strong></span>
+                    </div>
+                </div>
+            </div>
+            <div class="vehicle-gallery">
+                <div class="vehicle-gallery-nav">
+                    <button class="vehicle-nav-btn" id="vehiclePrev">◀</button>
+                    <button class="vehicle-nav-btn" id="vehicleNext">▶</button>
+                </div>
+                <img src="" alt="Vehicle Image" id="vehicleMainImage">
+                <div class="vehicle-thumbnails" id="vehicleThumbnails">
+                    <!-- Thumbnails will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">🚗 Elite Limo Service</div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="fleet.html">Fleet</a>
+                <a href="services.html">Services</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © 2025 Elite Limo Service. Call (999) 999-9999 for bookings.</p>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile Call Footer -->
+    <div class="sticky-mobile-footer">
+        <a href="tel:+19999999999" class="sticky-call-btn">
+            <span class="call-icon">📞</span>
+            <span class="call-text">
+                <strong>CALL NOW</strong><br>
+                <small>(999) 999-9999</small>
+            </span>
+            <span class="call-pulse"></span>
+        </a>
+    </div>
+
+<script src="templatemo-604-piano-scripts.js"></script>
+</body>
+</html>
