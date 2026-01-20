@@ -27,6 +27,8 @@ https://templatemo.com/tm-604-christmas-piano
 	box-sizing: border-box;
 }
 
+
+
 html {
 	scroll-behavior: smooth;
 }
@@ -37,6 +39,14 @@ body {
 	color: var(--text);
 	line-height: 1.6;
 	overflow-x: hidden;
+
+
+.container, .main-content, .content-wrapper {
+	margin: 0 auto;
+	padding: 0 24px;
+	max-width: 1400px;
+	width: 100%;
+}
 }
 
 /* Header - Two Row Design */
@@ -962,10 +972,10 @@ h1 {
 
 /* Section Styles */
 section {
-	padding: 140px 60px;
+	padding: 100px 0 80px 0;
+	margin-bottom: 48px;
 	position: relative;
 	z-index: 10;
-	margin-bottom: 40px;
 }
 
 .section-header {
