@@ -1,0 +1,119 @@
+/* =============================================
+   ABOUT — About Section (index.html, about.html)
+   Abdullah Limozen | Top Class Limousine
+   ============================================= */
+
+#about {
+	background: var(--bg-section);
+}
+
+.about-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 60px;
+	max-width: 1200px;
+	margin: 0 auto;
+	align-items: center;
+	padding: 0 30px;
+}
+
+.about-media {
+	position: relative;
+	border-radius: 24px;
+	overflow: hidden;
+	background: var(--glass-bg);
+	border: 1px solid var(--glass-border);
+}
+
+.about-media img {
+	width: 100%;
+	height: auto;
+	display: block;
+	aspect-ratio: 16/10;
+	object-fit: cover;
+}
+
+.youtube-btn {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 10px 20px;
+	background: rgba(0, 0, 0, 0.7);
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	border-radius: 50px;
+	color: #fff;
+	text-decoration: none;
+	font-size: 0.85rem;
+	font-weight: 500;
+	transition: all 0.3s ease;
+}
+
+.youtube-btn:hover {
+	background: #c41e3a;
+	border-color: #c41e3a;
+	transform: translateX(-50%) translateY(-3px);
+	box-shadow: 0 10px 30px rgba(196, 30, 58, 0.4);
+}
+
+.youtube-btn svg {
+	opacity: 0.9;
+}
+
+.about-content h3 {
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 2rem;
+	color: var(--gold-light);
+	margin-bottom: 20px;
+}
+
+.about-content p {
+	color: var(--text-muted);
+	margin-bottom: 20px;
+	font-size: 1.05rem;
+	line-height: 1.8;
+}
+
+.about-credits {
+	font-size: 0.9rem;
+	color: var(--text-muted);
+	opacity: 0.7;
+	margin-top: 10px;
+}
+
+.about-credits a {
+	color: var(--gold);
+	text-decoration: none;
+}
+
+.about-credits a:hover {
+	text-decoration: underline;
+}
+
+.about-stats {
+	display: flex;
+	gap: 40px;
+	margin-top: 30px;
+}
+
+.stat {
+	text-align: center;
+}
+
+.stat-number {
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 2.5rem;
+	font-weight: 700;
+	color: var(--gold);
+}
+
+.stat-label {
+	font-size: 0.85rem;
+	color: var(--text-muted);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}

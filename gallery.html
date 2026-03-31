@@ -6,7 +6,14 @@
     <title>Gallery - Top Class Limo</title>
     <meta name="description" content="View our luxury limousine gallery - Photos of our premium fleet including stretch limos, SUV limousines, party buses, and executive sedans.">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="templatemo-604-christmas-piano.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Split CSS files -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
 
@@ -15,8 +22,7 @@
         <!-- Logo Row -->
         <div class="header-logo-row">
             <a href="index.html" class="logo">
-                <span class="logo-icon">🚗</span>
-                Top Class Limo
+                <img src="images/TopClassLogo.jpg" alt="Top Class Limo">
             </a>
         </div>
         <!-- Navigation Row -->
@@ -50,7 +56,7 @@
     </header>
 
     <!-- Gallery Section -->
-    <section id="gallery" style="padding-top: 160px;">
+    <section id="gallery" style="padding-top: calc(var(--header-height) + 20px);">
         <div class="section-header">
             <span class="section-badge">Gallery</span>
             <h2>Our Luxury Fleet</h2>
@@ -58,35 +64,43 @@
         </div>
         <div class="gallery-grid">
             <div class="gallery-item" data-index="0">
-                <img src="images/stretch-limo.jpg" alt="Stretch Limousine Exterior">
+                <img src="images/Stretch Limousine.jpg" alt="Stretch Limousine" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');">
+                <div class="gallery-placeholder">
+                    <div class="placeholder-icon"><i class="fas fa-car-side"></i></div>
+                    <div class="placeholder-text">Stretch Limousine</div>
+                </div>
                 <div class="gallery-icon">+</div>
             </div>
             <div class="gallery-item" data-index="1">
-                <img src="images/suv-limo.jpg" alt="SUV Limousine Interior">
+                <img src="images/SUV Limousine.jpeg" alt="SUV Limousine" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');">
+                <div class="gallery-placeholder">
+                    <div class="placeholder-icon"><i class="fas fa-truck"></i></div>
+                    <div class="placeholder-text">SUV Limousine</div>
+                </div>
                 <div class="gallery-icon">+</div>
             </div>
             <div class="gallery-item" data-index="2">
-                <img src="images/party-bus.jpg" alt="Wedding Limousine">
+                <img src="images/party bus limousine.jpg" alt="Party Bus" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');">
+                <div class="gallery-placeholder">
+                    <div class="placeholder-icon"><i class="fas fa-bus"></i></div>
+                    <div class="placeholder-text">Party Bus</div>
+                </div>
                 <div class="gallery-icon">+</div>
             </div>
             <div class="gallery-item" data-index="3">
-                <img src="images/executive-sedan.jpg" alt="Executive Sedan">
+                <img src="images/Executive sedan.jpeg" alt="Executive Sedan" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');">
+                <div class="gallery-placeholder">
+                    <div class="placeholder-icon"><i class="fas fa-car"></i></div>
+                    <div class="placeholder-text">Executive Sedan</div>
+                </div>
                 <div class="gallery-icon">+</div>
             </div>
             <div class="gallery-item" data-index="4">
-                <img src="images/classic-limo.jpg" alt="Classic Limousine">
-                <div class="gallery-icon">+</div>
-            </div>
-            <div class="gallery-item" data-index="5">
-                <img src="images/luxury-van.jpg" alt="Luxury Van">
-                <div class="gallery-icon">+</div>
-            </div>
-            <div class="gallery-item" data-index="6">
-                <img src="images/stretch-limo.jpg" alt="Chauffeur Service">
-                <div class="gallery-icon">+</div>
-            </div>
-            <div class="gallery-item" data-index="7">
-                <img src="images/suv-limo.jpg" alt="Luxury Fleet">
+                <img src="images/Classic Limo.jpeg" alt="Classic Limousine" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');">
+                <div class="gallery-placeholder">
+                    <div class="placeholder-icon"><i class="fas fa-car-side"></i></div>
+                    <div class="placeholder-text">Classic Limousine</div>
+                </div>
                 <div class="gallery-icon">+</div>
             </div>
         </div>
@@ -105,7 +119,7 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <div class="footer-logo">🚗  Top Class Limo</div>
+            <div class="footer-logo"><img src="images/TopClassLogo.jpg" alt="Top Class Limo"></div>
             <div class="footer-links">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
@@ -123,7 +137,7 @@
     <!-- Sticky Mobile Call Footer -->
     <div class="sticky-mobile-footer">
         <a href="tel:+16478949073" class="sticky-call-btn">
-            <span class="call-icon">📞</span>
+            <span class="call-icon"><i class="fas fa-phone-alt"></i></span>
             <span class="call-text">
                 <strong>CALL NOW</strong><br>
                 <small>(647) 894 9073</small>

@@ -1,0 +1,561 @@
+/* =============================================
+   RESPONSIVE — All Media Queries + Mobile Fixes
+   Abdullah Limozen | Top Class Limousine
+   ============================================= */
+
+/* ---- Large Desktop (1200px+) ---- */
+@media (min-width: 1200px) {
+	.hero-subtitle {
+		font-size: 1.4rem;
+	}
+}
+
+/* ---- Tablet (max 1024px) ---- */
+@media (max-width: 1024px) {
+	.about-grid {
+		grid-template-columns: 1fr;
+		gap: 40px;
+	}
+
+	.features-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	/* Gallery bento grid on tablet */
+	.gallery-grid {
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-rows: repeat(4, 150px);
+	}
+
+	.gallery-item:nth-child(1) {
+		grid-column: span 3;
+		grid-row: span 2;
+	}
+
+	.gallery-item:nth-child(2) {
+		grid-column: span 3;
+		grid-row: span 1;
+	}
+
+	.gallery-item:nth-child(3) {
+		grid-column: span 3;
+		grid-row: span 1;
+	}
+
+	.gallery-item:nth-child(4) {
+		grid-column: span 2;
+		grid-row: span 1;
+	}
+
+	.gallery-item:nth-child(5) {
+		grid-column: span 2;
+		grid-row: span 1;
+	}
+
+	.gallery-item:nth-child(6) {
+		grid-column: span 2;
+		grid-row: span 1;
+	}
+
+	.gallery-item:nth-child(7) {
+		grid-column: span 3;
+		grid-row: span 1;
+	}
+
+	.gallery-item:nth-child(8) {
+		grid-column: span 3;
+		grid-row: span 1;
+	}
+
+	.lightbox-prev {
+		left: 10px;
+	}
+
+	.lightbox-next {
+		right: 10px;
+	}
+}
+
+/* ---- Mobile (max 768px) ---- */
+@media (max-width: 768px) {
+
+	/* --- Header --- */
+	.header-logo-row::before,
+	.header-logo-row::after {
+		display: none;
+	}
+
+	.header-logo-row {
+		padding: 10px 20px 8px;
+	}
+
+	.logo img {
+		height: 72px;
+	}
+
+	.header-nav-row {
+		min-height: 50px;
+	}
+
+	.nav-container {
+		min-height: 50px;
+	}
+
+	.nav-decor {
+		display: none;
+	}
+
+	/* Mobile Nav Drawer */
+	.nav-links {
+		position: fixed;
+		top: 0;
+		right: -100%;
+		width: 100%;
+		height: 100vh;
+		background: var(--bg-dark);
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 0;
+		transition: right 0.3s ease;
+		z-index: 1001;
+	}
+
+	.nav-links.active {
+		right: 0;
+	}
+
+	.nav-toggle {
+		display: flex;
+		z-index: 1002;
+	}
+
+	.nav-links li::after {
+		display: none;
+	}
+
+	.nav-links a {
+		padding: 20px 40px;
+		font-size: 1.1rem;
+		min-height: 60px;
+		display: flex;
+		align-items: center;
+	}
+
+	/* Hamburger to X animation */
+	.nav-toggle.active span:nth-child(1) {
+		transform: rotate(45deg) translate(5px, 5px);
+	}
+
+	.nav-toggle.active span:nth-child(2) {
+		opacity: 0;
+	}
+
+	.nav-toggle.active span:nth-child(3) {
+		transform: rotate(-45deg) translate(5px, -5px);
+	}
+
+	/* --- Body offset for sticky footer --- */
+	body {
+		padding-bottom: 80px;
+	}
+
+	/* --- Sections --- */
+	section {
+		padding: 55px 16px 50px;
+	}
+
+	.section-header {
+		margin-bottom: 40px;
+		padding: 0 16px;
+	}
+
+	.section-header h2 {
+		font-size: 2rem;
+		letter-spacing: 0.5px;
+	}
+
+	.section-badge {
+		font-size: 0.7rem;
+		letter-spacing: 2px;
+		padding: 10px 20px;
+		margin-bottom: 25px;
+	}
+
+	.section-desc {
+		font-size: 1rem;
+	}
+
+	/* --- Hero --- */
+	.hero-badge {
+		font-size: 0.7rem;
+		letter-spacing: 2px;
+		padding: 10px 22px;
+		margin-bottom: 25px;
+	}
+
+	h1 {
+		font-size: clamp(2.2rem, 9vw, 3.5rem);
+		margin-bottom: 20px;
+	}
+
+	.hero-subtitle {
+		font-size: 1.15rem;
+		font-weight: 500;
+	}
+
+	/* --- Features grid --- */
+	.features-grid {
+		grid-template-columns: 1fr;
+		gap: 20px;
+		padding: 0 16px;
+	}
+
+	.feature-card {
+		padding: 28px 24px;
+	}
+
+	.feature-icon {
+		width: 90px;
+		height: 90px;
+		margin-bottom: 20px;
+	}
+
+	.limo-image {
+		height: 160px;
+	}
+
+	.quote-cta {
+		margin: 15px -24px -28px -24px;
+		padding: 16px 24px;
+		font-size: 0.85rem;
+	}
+
+	/* --- Fleet / Songs grid --- */
+	.songs-grid {
+		gap: 16px;
+	}
+
+	.song-card {
+		padding: 20px;
+		gap: 16px;
+	}
+
+	.song-card:hover {
+		transform: none; /* disable slide on mobile; tap is enough */
+	}
+
+	.song-card-title {
+		font-size: 1.2rem;
+	}
+
+	/* --- About --- */
+	.about-grid {
+		gap: 30px;
+		padding: 0 16px;
+	}
+
+	.about-stats {
+		gap: 16px;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.stat-number {
+		font-size: 2rem;
+	}
+
+	/* --- Service features / phone hero --- */
+	.contact-phone-hero {
+		padding: 24px 16px;
+		border-radius: 20px;
+		margin-bottom: 30px;
+	}
+
+	.phone-number-large {
+		flex-direction: column;
+		gap: 12px;
+		padding: 20px 16px;
+	}
+
+	.phone-icon-large {
+		font-size: 2rem;
+	}
+
+	.phone-number-text {
+		font-size: 2.4rem !important;
+		letter-spacing: 1px;
+	}
+
+	.contact-phone-hero .phone-number-text {
+		font-size: 2.8rem !important;
+		font-weight: 800 !important;
+	}
+
+	.booking-notice h3 {
+		font-size: 1.2rem;
+	}
+
+	.booking-notice p {
+		font-size: 1rem;
+	}
+
+	.service-features {
+		margin-bottom: 20px;
+	}
+
+	.call-action {
+		padding: 20px 16px;
+	}
+
+	/* --- Mini Player --- */
+	.mini-player {
+		padding: 20px 16px;
+	}
+
+	.song-selector {
+		flex-direction: column;
+		height: auto;
+	}
+
+	.song-tab {
+		height: 44px;
+	}
+
+	.player-controls-row {
+		flex-direction: column;
+		gap: 15px;
+	}
+
+	.control-group {
+		width: 100%;
+		justify-content: center;
+	}
+
+	.control-slider {
+		width: 120px;
+	}
+
+	.repeat-toggle {
+		margin-top: 5px;
+	}
+
+	/* --- Gallery --- */
+	.gallery-grid {
+		grid-template-columns: 1fr;
+		gap: 12px;
+		padding: 0 16px;
+	}
+
+	.gallery-item {
+		aspect-ratio: 16 / 10;
+		min-height: 200px;
+	}
+
+	.lightbox-prev {
+		left: 8px;
+	}
+
+	.lightbox-next {
+		right: 8px;
+	}
+
+	/* Events gallery */
+	.events-grid {
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+
+	.event-card {
+		height: 180px;
+	}
+
+	/* --- Contact form --- */
+	.contact-container {
+		grid-template-columns: 1fr;
+		gap: 25px;
+		padding: 0 16px;
+	}
+
+	.contact-info {
+		padding: 24px 16px;
+	}
+
+	.contact-form {
+		padding: 24px 16px;
+	}
+
+	.form-buttons {
+		flex-direction: column;
+	}
+
+	/* --- Service areas / maps --- */
+	.service-areas-map-container {
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+
+	.map-wrapper iframe {
+		height: 280px;
+	}
+
+	.map-service-info {
+		padding: 20px 16px;
+	}
+
+	.coverage-highlights {
+		gap: 8px;
+	}
+
+	.coverage-item {
+		padding: 8px 12px;
+		font-size: 0.9rem;
+	}
+
+	.gta-map-container {
+		grid-template-columns: 1fr;
+		gap: 20px;
+		padding: 0 16px;
+	}
+
+	.map-wrapper-static {
+		padding: 10px;
+	}
+
+	.map-wrapper-static iframe {
+		height: 280px;
+	}
+
+	.gta-coverage-info {
+		padding: 20px 16px;
+	}
+
+	.gta-coverage-info h3 {
+		font-size: 1.5rem;
+	}
+
+	.coverage-list {
+		grid-template-columns: 1fr;
+		gap: 8px;
+	}
+
+	.coverage-list .coverage-item {
+		padding: 10px 12px;
+	}
+
+	.map-cta-box {
+		padding: 14px;
+	}
+
+	/* --- Vehicle modal --- */
+	.vehicle-modal-content {
+		padding: 20px 16px;
+		margin: 10px;
+	}
+
+	.vehicle-modal-header h2 {
+		font-size: 1.8rem;
+	}
+
+	.quote-phone-display {
+		font-size: 1rem;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.vehicle-nav-btn {
+		width: 40px;
+		height: 40px;
+		font-size: 1rem;
+	}
+
+	#vehiclePrev {
+		left: 10px;
+	}
+
+	#vehicleNext {
+		right: 10px;
+	}
+
+	.vehicle-thumb {
+		width: 60px;
+		height: 45px;
+	}
+
+	/* --- Footer --- */
+	.footer-content {
+		flex-direction: column;
+		text-align: center;
+		gap: 20px;
+	}
+
+	footer {
+		padding: 35px 20px 20px;
+	}
+
+	.footer-links {
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 8px 20px;
+	}
+
+	/* --- Sticky mobile call button --- */
+	.sticky-mobile-footer {
+		display: block;
+	}
+}
+
+/* ---- Small phones (max 480px) ---- */
+@media (max-width: 480px) {
+	h1 {
+		font-size: clamp(1.9rem, 10vw, 2.8rem);
+	}
+
+	.section-header h2 {
+		font-size: 1.75rem;
+	}
+
+	.phone-number-text {
+		font-size: 2rem !important;
+		letter-spacing: 0;
+	}
+
+	.contact-phone-hero .phone-number-text {
+		font-size: 2.2rem !important;
+	}
+
+	.feature-card h3 {
+		font-size: 1.3rem;
+	}
+
+	.song-card-icon {
+		width: 48px;
+		height: 48px;
+		font-size: 1.1rem;
+	}
+
+	.about-stats {
+		gap: 12px;
+	}
+
+	.stat-number {
+		font-size: 1.8rem;
+	}
+
+	.stat-label {
+		font-size: 0.75rem;
+	}
+
+	.sticky-call-btn {
+		font-size: 0.9rem;
+		padding: 9px 16px;
+	}
+
+	.call-text strong {
+		font-size: 0.8rem;
+	}
+
+	.call-text small {
+		font-size: 0.9rem;
+	}
+}

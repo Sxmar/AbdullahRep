@@ -1,0 +1,252 @@
+/* =============================================
+   GALLERY — Gallery Grid, Lightbox, Placeholders
+   Used on: gallery.html (also index.html events)
+   Abdullah Limozen | Top Class Limousine
+   ============================================= */
+
+#gallery {
+	background: var(--bg-dark);
+}
+
+.gallery-grid {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px;
+	padding: 0 30px;
+}
+
+.gallery-item {
+	position: relative;
+	overflow: hidden;
+	border-radius: 16px;
+	cursor: pointer;
+	background: var(--glass-bg);
+	border: 1px solid var(--glass-border);
+	aspect-ratio: 16 / 10;
+	min-height: 280px;
+}
+
+.gallery-item img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	transition: transform 0.5s ease;
+	display: block;
+}
+
+.gallery-item:hover img {
+	transform: scale(1.1);
+}
+
+.gallery-item::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(180deg, transparent 60%, rgba(0, 0, 0, 0.6) 100%);
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover::after {
+	opacity: 1;
+}
+
+.gallery-item .gallery-icon {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	width: 50px;
+	height: 50px;
+	background: rgba(212, 175, 55, 0.9);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #000;
+	font-size: 1.2rem;
+	transition: transform 0.3s ease;
+	z-index: 2;
+}
+
+.gallery-item:hover .gallery-icon {
+	transform: translate(-50%, -50%) scale(1);
+}
+
+/* Gallery Placeholder Styling */
+.gallery-placeholder {
+	position: absolute;
+	inset: 0;
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%);
+	backdrop-filter: blur(10px);
+	z-index: 1;
+}
+
+.gallery-item.no-image .gallery-placeholder {
+	display: flex;
+}
+
+.placeholder-icon {
+	font-size: 4rem;
+	margin-bottom: 15px;
+	opacity: 0.7;
+	filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.3));
+}
+
+.placeholder-text {
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 1.3rem;
+	font-weight: 600;
+	color: var(--gold);
+	text-align: center;
+	letter-spacing: 1px;
+	padding: 0 20px;
+}
+
+.gallery-item.no-image {
+	background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 100%);
+	border: 2px dashed var(--glass-border);
+}
+
+.gallery-item.no-image:hover {
+	border-color: var(--gold);
+	background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(212, 175, 55, 0.1) 100%);
+}
+
+.gallery-item.no-image:hover .placeholder-icon {
+	transform: scale(1.1);
+	transition: transform 0.3s ease;
+}
+
+.gallery-item.no-image:hover .placeholder-text {
+	color: var(--gold-light);
+}
+
+/* Events gallery */
+.events-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+	gap: 20px;
+}
+
+.event-card {
+	position: relative;
+	height: 220px;
+	border-radius: 16px;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.event-overlay {
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, 0.8) 100%);
+	display: flex;
+	align-items: flex-end;
+	padding: 20px;
+}
+
+.event-overlay h4 {
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-size: 1.2rem;
+}
+
+/* ---- Lightbox ---- */
+.lightbox {
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.95);
+	z-index: 2000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s ease;
+}
+
+.lightbox.active {
+	opacity: 1;
+	visibility: visible;
+}
+
+.lightbox-content {
+	max-width: 90vw;
+	max-height: 90vh;
+	position: relative;
+}
+
+.lightbox-content img {
+	max-width: 100%;
+	max-height: 85vh;
+	border-radius: 12px;
+	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close {
+	position: absolute;
+	top: -50px;
+	right: 0;
+	width: 40px;
+	height: 40px;
+	min-width: 44px;
+	min-height: 44px;
+	background: var(--glass-bg);
+	border: 1px solid var(--glass-border);
+	border-radius: 50%;
+	color: #fff;
+	font-size: 1.5rem;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s ease;
+	touch-action: manipulation;
+}
+
+.lightbox-close:hover {
+	background: var(--red);
+	border-color: var(--red);
+}
+
+.lightbox-nav {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 50px;
+	height: 50px;
+	min-width: 44px;
+	min-height: 44px;
+	background: var(--glass-bg);
+	border: 1px solid var(--glass-border);
+	border-radius: 50%;
+	color: #fff;
+	font-size: 1.2rem;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s ease;
+	touch-action: manipulation;
+}
+
+.lightbox-nav:hover {
+	background: var(--gold);
+	color: #000;
+}
+
+.lightbox-prev {
+	left: -70px;
+}
+
+.lightbox-next {
+	right: -70px;
+}

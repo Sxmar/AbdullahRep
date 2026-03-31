@@ -1,0 +1,141 @@
+/* =============================================
+   HERO — Hero Section (index.html only)
+   Abdullah Limozen | Top Class Limousine
+   ============================================= */
+
+#hero {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: calc(var(--header-height) + 40px) 20px 80px;
+	position: relative;
+	background:
+		radial-gradient(ellipse at 50% 30%, rgba(212, 175, 55, 0.08) 0%, transparent 60%),
+		radial-gradient(ellipse at 80% 80%, rgba(212, 175, 55, 0.04) 0%, transparent 50%),
+		var(--bg-dark);
+	text-align: center;
+	animation: heroFadeIn 1s ease forwards;
+}
+
+@keyframes heroFadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.hero-content {
+	max-width: 900px;
+	margin: 0 auto;
+	position: relative;
+	z-index: 10;
+}
+
+.hero-badge {
+	display: inline-block;
+	padding: 12px 32px;
+	background: rgba(212, 175, 55, 0.08);
+	border: 1px solid rgba(212, 175, 55, 0.5);
+	border-radius: 50px;
+	font-size: 0.85rem;
+	color: var(--gold);
+	margin-bottom: 40px;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	font-weight: 600;
+	transition: all 0.35s ease;
+	backdrop-filter: blur(10px);
+	box-shadow: 0 0 20px rgba(212, 175, 55, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.hero-badge:hover {
+	background: rgba(212, 175, 55, 0.18);
+	transform: translateY(-3px);
+	box-shadow: 0 12px 35px rgba(212, 175, 55, 0.25);
+	border-color: var(--gold);
+}
+
+h1 {
+	font-family: 'Cormorant Garamond', serif;
+	font-size: clamp(3rem, 8vw, 6.5rem);
+	font-weight: 700;
+	line-height: 1.15;
+	margin-bottom: 30px;
+	background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.3));
+}
+
+/* Two-line hero title styling */
+.hero-line1 {
+	display: block;
+}
+
+.hero-line2 {
+	display: block;
+}
+
+.hero-subtitle {
+	font-size: 1.5rem;
+	color: var(--text-light);
+	max-width: 700px;
+	margin: 0 auto;
+	font-weight: 400;
+	line-height: 1.6;
+	letter-spacing: 0.5px;
+}
+
+.hero-subtitle strong {
+	color: var(--gold);
+	font-weight: 700;
+	letter-spacing: 1px;
+	font-size: 1.1em;
+}
+
+.quote-btn {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 12px 20px;
+	background: rgba(0, 0, 0, 0.8);
+	backdrop-filter: blur(10px);
+	border: 1px solid var(--gold);
+	border-radius: 50px;
+	color: var(--gold);
+	font-size: 0.9rem;
+	font-weight: 500;
+	transition: all 0.3s ease;
+	cursor: pointer;
+	touch-action: manipulation;
+}
+
+.quote-btn:hover {
+	background: var(--gold);
+	color: #000;
+	transform: translateX(-50%) translateY(-3px);
+	box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+}
+
+.quote-icon {
+	font-size: 1.1rem;
+}
+
+.quote-text {
+	text-align: left;
+}
+
+.quote-phone {
+	font-weight: 700;
+	font-size: 1rem;
+}

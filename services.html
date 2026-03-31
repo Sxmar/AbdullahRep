@@ -6,7 +6,17 @@
     <title>Services - Top Class Limo</title>
     <meta name="description" content="Professional limousine services - Weddings, proms, corporate events, airport transfers, special occasions. Premium transportation in the GTA.">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="templatemo-604-christmas-piano.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Split CSS files -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="css/features.css">
+    <link rel="stylesheet" href="css/fleet.css">
+    <link rel="stylesheet" href="css/service-areas.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
 
@@ -15,8 +25,7 @@
         <!-- Logo Row -->
         <div class="header-logo-row">
             <a href="index.html" class="logo">
-                <span class="logo-icon">🚗</span>
-                Top Class Limo
+                <img src="images/TopClassLogo.jpg" alt="Top Class Limo">
             </a>
         </div>
         <!-- Navigation Row -->
@@ -50,7 +59,7 @@
     </header>
 
     <!-- Services Section -->
-    <section id="services" style="padding-top: 160px;">
+    <section id="services" style="padding-top: calc(var(--header-height) + 20px);">
         <div class="section-header">
             <span class="section-badge">Services</span>
             <h2>Our Premium Services</h2>
@@ -58,68 +67,68 @@
         </div>
         <div class="songs-grid">
             <div class="song-card">
-                <div class="song-card-icon">💒</div>
+                <div class="song-card-icon"><i class="fas fa-ring"></i></div>
                 <div class="song-card-info">
                     <div class="song-card-title">Weddings</div>
                     <div class="song-card-meta">Elegant • Memorable • Luxury</div>
                 </div>
-                <div class="song-card-duration">📞</div>
+                <div class="song-card-duration"><i class="fas fa-phone-alt"></i></div>
             </div>
             <div class="song-card">
-                <div class="song-card-icon">🎓</div>
+                <div class="song-card-icon"><i class="fas fa-graduation-cap"></i></div>
                 <div class="song-card-info">
                     <div class="song-card-title">Prom & Graduation</div>
                     <div class="song-card-meta">Special • Stylish • Safe</div>
                 </div>
-                <div class="song-card-duration">📞</div>
+                <div class="song-card-duration"><i class="fas fa-phone-alt"></i></div>
             </div>
             <div class="song-card">
-                <div class="song-card-icon">💼</div>
+                <div class="song-card-icon"><i class="fas fa-briefcase"></i></div>
                 <div class="song-card-info">
                     <div class="song-card-title">Corporate Events</div>
                     <div class="song-card-meta">Professional • Reliable • Executive</div>
                 </div>
-                <div class="song-card-duration">📞</div>
+                <div class="song-card-duration"><i class="fas fa-phone-alt"></i></div>
             </div>
             <div class="song-card">
-                <div class="song-card-icon">✈️</div>
+                <div class="song-card-icon"><i class="fas fa-plane"></i></div>
                 <div class="song-card-info">
                     <div class="song-card-title">Airport Transfer</div>
                     <div class="song-card-meta">Punctual • Comfortable • 24/7</div>
                 </div>
-                <div class="song-card-duration">📞</div>
+                <div class="song-card-duration"><i class="fas fa-phone-alt"></i></div>
             </div>
             <div class="song-card">
-                <div class="song-card-icon">🍾</div>
+                <div class="song-card-icon"><i class="fas fa-champagne-glasses"></i></div>
                 <div class="song-card-info">
                     <div class="song-card-title">Special Occasions</div>
                     <div class="song-card-meta">Anniversaries • Birthdays • Celebrations</div>
                 </div>
-                <div class="song-card-duration">📞</div>
+                <div class="song-card-duration"><i class="fas fa-phone-alt"></i></div>
             </div>
             <div class="song-card">
-                <div class="song-card-icon">🌃</div>
+                <div class="song-card-icon"><i class="fas fa-moon"></i></div>
                 <div class="song-card-info">
                     <div class="song-card-title">Night Out</div>
                     <div class="song-card-meta">Safe • Fun • Designated Driver</div>
                 </div>
-                <div class="song-card-duration">📞</div>
+                <div class="song-card-duration"><i class="fas fa-phone-alt"></i></div>
             </div>
             <div class="song-card">
-                <div class="song-card-icon">👥</div>
+                <div class="song-card-icon"><i class="fas fa-users"></i></div>
                 <div class="song-card-info">
                     <div class="song-card-title">Group Transportation</div>
                     <div class="song-card-meta">Events • Tours • Large Groups</div>
                 </div>
-                <div class="song-card-duration">📞</div>
+                <div class="song-card-duration"><i class="fas fa-phone-alt"></i></div>
             </div>
             <div class="song-card">
-                <div class="song-card-icon">⭐</div>
+                <div class="song-card-icon"><i class="fas fa-star"></i></div>
                 <div class="song-card-info">
                     <div class="song-card-title">VIP Service</div>
                     <div class="song-card-meta">Premium • Exclusive • Luxury</div>
                 </div>
-                <div class="song-card-duration">📞</div>
+                <div class="song-card-duration"><i class="fas fa-phone-alt"></i></div>
             </div>
         </div>
     </section>
@@ -143,15 +152,15 @@
                 </iframe>
             </div>
             <div class="map-service-info">
-                <h3>🌍 Our Service Coverage</h3>
+                <h3><i class="fas fa-globe"></i> Our Service Coverage</h3>
                 <p>We proudly serve the entire Greater Toronto Area including:</p>
                 <div class="coverage-highlights">
-                    <span class="coverage-item">🏙️ Downtown Toronto</span>
-                    <span class="coverage-item">🌆 Mississauga</span>
-                    <span class="coverage-item">🏛️ Brampton</span>
-                    <span class="coverage-item">✈️ Pearson Airport</span>
-                    <span class="coverage-item">🏢 Richmond Hill</span>
-                    <span class="coverage-item">🌳 Markham</span>
+                    <span class="coverage-item"><i class="fas fa-building"></i> Downtown Toronto</span>
+                    <span class="coverage-item"><i class="fas fa-city"></i> Mississauga</span>
+                    <span class="coverage-item"><i class="fas fa-landmark"></i> Brampton</span>
+                    <span class="coverage-item"><i class="fas fa-plane"></i> Pearson Airport</span>
+                    <span class="coverage-item"><i class="fas fa-building"></i> Richmond Hill</span>
+                    <span class="coverage-item"><i class="fas fa-tree"></i> Markham</span>
                 </div>
                 <div class="map-cta">
                     <strong>Call (647) 894 9073 for service anywhere in the GTA</strong>
@@ -163,7 +172,7 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <div class="footer-logo">🚗 Top Class Limo</div>
+            <div class="footer-logo"><img src="images/TopClassLogo.jpg" alt="Top Class Limo"></div>
             <div class="footer-links">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
@@ -181,7 +190,7 @@
     <!-- Sticky Mobile Call Footer -->
     <div class="sticky-mobile-footer">
         <a href="tel:+16478949073" class="sticky-call-btn">
-            <span class="call-icon">📞</span>
+            <span class="call-icon"><i class="fas fa-phone-alt"></i></span>
             <span class="call-text">
                 <strong>CALL NOW</strong><br>
                 <small>(647) 894 9073</small>

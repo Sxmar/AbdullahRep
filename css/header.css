@@ -1,0 +1,217 @@
+/* =============================================
+   HEADER — Logo Row, Nav Row, Mobile Toggle
+   Abdullah Limozen | Top Class Limousine
+   ============================================= */
+
+/* Header - Two Row Design */
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	background: linear-gradient(180deg, rgba(5, 5, 8, 0.98) 0%, rgba(5, 5, 8, 0.96) 100%);
+	backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(20px);
+	border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Logo Row */
+.header-logo-row {
+	text-align: center;
+	padding: 16px 20px 12px;
+	border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+	position: relative;
+	margin-bottom: 0;
+}
+
+.header-logo-row::before,
+.header-logo-row::after {
+	content: '❄';
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	color: var(--gold);
+	opacity: 0.5;
+	font-size: 1rem;
+}
+
+.header-logo-row::before {
+	left: 20px;
+}
+
+.header-logo-row::after {
+	right: 20px;
+}
+
+.logo {
+	text-decoration: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.logo img {
+	height: 105px;
+	width: auto;
+	object-fit: contain;
+	border-radius: 10px;
+	border: 2px solid rgba(212, 175, 55, 0.35);
+	box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
+	animation: logoGlow 3s ease-in-out infinite;
+	transition: transform 0.35s ease, filter 0.35s ease, box-shadow 0.35s ease;
+}
+
+.logo:hover img {
+	transform: scale(1.06);
+	filter: drop-shadow(0 0 16px rgba(212, 175, 55, 0.85));
+	box-shadow: 0 6px 28px rgba(212, 175, 55, 0.35);
+}
+
+@keyframes logoGlow {
+	0%,
+	100% {
+		filter: drop-shadow(0 0 6px rgba(212, 175, 55, 0.45));
+	}
+	50% {
+		filter: drop-shadow(0 0 18px rgba(212, 175, 55, 0.85));
+	}
+}
+
+/* Navigation Row */
+.header-nav-row {
+	padding: 0;
+	position: relative;
+	overflow: hidden;
+}
+
+.header-nav-row::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(90deg,
+			transparent 0%,
+			rgba(196, 30, 58, 0.08) 25%,
+			rgba(34, 139, 34, 0.08) 50%,
+			rgba(196, 30, 58, 0.08) 75%,
+			transparent 100%);
+	pointer-events: none;
+}
+
+.nav-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	padding: 0 60px;
+}
+
+/* Christmas Decorations */
+.nav-decor {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 0 20px;
+	color: var(--gold);
+	opacity: 0.6;
+	font-size: 0.9rem;
+}
+
+.nav-decor .ornament {
+	animation: swing 4s ease-in-out infinite;
+}
+
+@keyframes swing {
+	0%,
+	100% {
+		transform: rotate(-5deg);
+	}
+	50% {
+		transform: rotate(5deg);
+	}
+}
+
+.nav-links {
+	display: flex;
+	gap: 0;
+	list-style: none;
+	padding: 0;
+}
+
+.nav-links li {
+	position: relative;
+}
+
+.nav-links li::after {
+	content: '✦';
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	color: var(--gold);
+	opacity: 0.3;
+	font-size: 0.5rem;
+}
+
+.nav-links li:last-child::after {
+	display: none;
+}
+
+.nav-links a {
+	color: var(--text-muted);
+	text-decoration: none;
+	font-size: 0.85rem;
+	font-weight: 500;
+	transition: all 0.3s ease;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	padding: 12px 20px;
+	display: block;
+	position: relative;
+}
+
+.nav-links a::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 2px;
+	background: linear-gradient(90deg, var(--gold-light), var(--gold), var(--gold-light));
+	transition: all 0.35s ease;
+	transform: translateX(-50%);
+	border-radius: 2px;
+}
+
+.nav-links a:hover {
+	color: var(--gold);
+	background: rgba(212, 175, 55, 0.06);
+	letter-spacing: 1.5px;
+}
+
+.nav-links a:hover::before {
+	width: 70%;
+}
+
+.nav-toggle {
+	display: none;
+	flex-direction: column;
+	gap: 5px;
+	cursor: pointer;
+	padding: 10px;
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.nav-toggle span {
+	width: 25px;
+	height: 2px;
+	background: var(--gold);
+	transition: all 0.3s ease;
+}

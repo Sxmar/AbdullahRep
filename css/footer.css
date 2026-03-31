@@ -1,0 +1,191 @@
+/* =============================================
+   FOOTER — Footer, Sticky Mobile Call Button
+   Used on: all pages
+   Abdullah Limozen | Top Class Limousine
+   ============================================= */
+
+footer {
+	background: var(--bg-dark);
+	padding: 50px 40px 25px;
+	position: relative;
+	z-index: 10;
+	border-top: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.footer-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+	flex-wrap: wrap;
+	gap: 30px;
+}
+
+.footer-logo img {
+	height: 80px;
+	width: auto;
+	object-fit: contain;
+	border-radius: 8px;
+	border: 1px solid rgba(212, 175, 55, 0.3);
+	filter: drop-shadow(0 0 6px rgba(212, 175, 55, 0.4));
+	transition: filter 0.35s ease, transform 0.35s ease;
+}
+
+.footer-logo img:hover {
+	filter: drop-shadow(0 0 14px rgba(212, 175, 55, 0.8));
+	transform: scale(1.04);
+}
+
+.footer-links {
+	display: flex;
+	gap: 30px;
+	flex-wrap: wrap;
+}
+
+.footer-links a {
+	color: var(--text-muted);
+	text-decoration: none;
+	transition: color 0.3s ease;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 0.85rem;
+	min-height: 44px;
+	display: flex;
+	align-items: center;
+}
+
+.footer-links a:hover {
+	color: var(--gold);
+}
+
+.footer-bottom {
+	text-align: center;
+	padding: 30px 20px 0;
+	margin-top: 30px;
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	color: var(--text-muted);
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 0.88rem;
+	letter-spacing: 0.5px;
+}
+
+/* ---- Sticky Mobile Call Footer ---- */
+.sticky-mobile-footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+	padding: 5px 14px;
+	background: rgba(0, 0, 0, 0.92);
+	border-top: 1px solid rgba(212, 175, 55, 0.5);
+	box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
+	display: none; /* shown on mobile via responsive.css */
+	backdrop-filter: blur(12px);
+}
+
+.sticky-call-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	background: linear-gradient(135deg, #c9a227, #f0d060, #c9a227);
+	color: #000000;
+	text-decoration: none;
+	border-radius: 10px;
+	padding: 7px 18px;
+	font-family: 'Outfit', sans-serif;
+	font-weight: 700;
+	font-size: 0.95rem;
+	transition: all 0.25s ease;
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	max-width: 420px;
+	margin: 0 auto;
+	touch-action: manipulation;
+	box-shadow: 0 3px 12px rgba(201, 162, 39, 0.35);
+	outline: none;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.sticky-call-btn:focus,
+.sticky-call-btn:focus-visible {
+	outline: none;
+	box-shadow: 0 3px 12px rgba(201, 162, 39, 0.35);
+}
+
+.sticky-call-btn:hover,
+.sticky-call-btn:active {
+	transform: scale(1.02);
+	box-shadow: 0 5px 18px rgba(212, 175, 55, 0.5);
+}
+
+.call-icon {
+	font-size: 1.1rem;
+	animation: ringPulse 2s infinite;
+	flex-shrink: 0;
+}
+
+.call-text {
+	text-align: left;
+}
+
+.call-text strong {
+	display: block;
+	font-size: 0.85rem;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+}
+
+.call-text small {
+	font-size: 0.95rem;
+	font-weight: 700;
+	opacity: 0.9;
+	letter-spacing: 0.5px;
+}
+
+.call-pulse {
+	display: none;
+}
+
+@keyframes ringPulse {
+	0%,
+	100% {
+		transform: scale(1) rotate(0deg);
+	}
+	25% {
+		transform: scale(1.1) rotate(-5deg);
+	}
+	50% {
+		transform: scale(1) rotate(0deg);
+	}
+	75% {
+		transform: scale(1.1) rotate(5deg);
+	}
+}
+
+@keyframes callPulse {
+	0% {
+		transform: translate(-50%, -50%) scale(1);
+		opacity: 0.7;
+	}
+	50% {
+		transform: translate(-50%, -50%) scale(1.1);
+		opacity: 0.3;
+	}
+	100% {
+		transform: translate(-50%, -50%) scale(1.2);
+		opacity: 0;
+	}
+}
+
+/* Audience-specific typography */
+.testimonial-author strong {
+	letter-spacing: 0.5px;
+}
