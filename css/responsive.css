@@ -3,6 +3,17 @@
    Abdullah Limozen | Top Class Limousine
    ============================================= */
 
+/* ---- Base: About Note (all screen sizes) ---- */
+.about-note {
+	padding: 14px 18px;
+	border-left: 3px solid var(--gold);
+	background: rgba(212, 175, 55, 0.07);
+	border-radius: 0 8px 8px 0;
+	margin: 20px 0;
+	font-size: 1rem;
+	color: var(--gold);
+}
+
 /* ---- Large Desktop (1200px+) ---- */
 @media (min-width: 1200px) {
 	.hero-subtitle {
@@ -79,6 +90,18 @@
 /* ---- Mobile (max 768px) ---- */
 @media (max-width: 768px) {
 
+	/* Update header height CSS variable for actual mobile header size */
+	:root {
+		--header-height: 152px;
+	}
+
+	/* Prevent horizontal overflow on all pages */
+	html,
+	body {
+		overflow-x: hidden;
+		max-width: 100%;
+	}
+
 	/* --- Header --- */
 	.header-logo-row::before,
 	.header-logo-row::after {
@@ -99,13 +122,15 @@
 
 	.nav-container {
 		min-height: 50px;
+		/* Reserve space on right for hamburger, remove excessive left padding */
+		padding: 0 64px 0 20px;
 	}
 
 	.nav-decor {
 		display: none;
 	}
 
-	/* Mobile Nav Drawer */
+	/* Mobile Nav Drawer — full-screen slide-in */
 	.nav-links {
 		position: fixed;
 		top: 0;
@@ -119,6 +144,8 @@
 		gap: 0;
 		transition: right 0.3s ease;
 		z-index: 1001;
+		padding: 0;
+		list-style: none;
 	}
 
 	.nav-links.active {
@@ -135,14 +162,17 @@
 	}
 
 	.nav-links a {
-		padding: 20px 40px;
+		padding: 18px 40px;
 		font-size: 1.1rem;
 		min-height: 60px;
 		display: flex;
 		align-items: center;
+		justify-content: center;
+		width: 100%;
+		letter-spacing: 2px;
 	}
 
-	/* Hamburger to X animation */
+	/* Hamburger → X animation */
 	.nav-toggle.active span:nth-child(1) {
 		transform: rotate(45deg) translate(5px, 5px);
 	}
@@ -167,7 +197,7 @@
 
 	.section-header {
 		margin-bottom: 40px;
-		padding: 0 16px;
+		padding: 0 8px;
 	}
 
 	.section-header h2 {
@@ -187,6 +217,10 @@
 	}
 
 	/* --- Hero --- */
+	#hero {
+		min-height: calc(100svh - var(--header-height));
+	}
+
 	.hero-badge {
 		font-size: 0.7rem;
 		letter-spacing: 2px;
@@ -204,7 +238,7 @@
 		font-weight: 500;
 	}
 
-	/* --- Features grid --- */
+	/* --- Features grid (Fleet vehicle cards) --- */
 	.features-grid {
 		grid-template-columns: 1fr;
 		gap: 20px;
@@ -212,41 +246,62 @@
 	}
 
 	.feature-card {
-		padding: 28px 24px;
+		padding: 0 0 28px;
+		/* Remove side padding so image bleeds to edges */
+		overflow: hidden;
 	}
 
-	.feature-icon {
-		width: 90px;
-		height: 90px;
-		margin-bottom: 20px;
+	/* Vehicle photo: full-width hero image inside the card */
+	.feature-card .feature-icon {
+		width: 100%;
+		height: 200px;
+		border-radius: 14px 14px 0 0;
+		margin: 0 0 20px;
+		overflow: hidden;
 	}
 
-	.limo-image {
-		height: 160px;
+	.feature-card .limo-image {
+		height: 100%;
+		width: 100%;
+		border-radius: 0;
+		border: none;
+		object-fit: cover;
+	}
+
+	/* Re-add side padding for text content below the image */
+	.feature-card h3,
+	.feature-card p {
+		padding: 0 24px;
 	}
 
 	.quote-cta {
-		margin: 15px -24px -28px -24px;
+		margin: 15px 0 0;
 		padding: 16px 24px;
 		font-size: 0.85rem;
+		border-radius: 0 0 24px 24px;
 	}
 
-	/* --- Fleet / Songs grid --- */
+	/* --- Services / Fleet listing grid --- */
 	.songs-grid {
 		gap: 16px;
+		padding: 0 16px;
 	}
 
 	.song-card {
-		padding: 20px;
+		padding: 18px 20px;
 		gap: 16px;
 	}
 
 	.song-card:hover {
-		transform: none; /* disable slide on mobile; tap is enough */
+		transform: none; /* disable slide on mobile; tap is sufficient */
 	}
 
 	.song-card-title {
 		font-size: 1.2rem;
+	}
+
+	.song-card-meta {
+		font-size: 0.85rem;
 	}
 
 	/* --- About --- */
@@ -265,11 +320,18 @@
 		font-size: 2rem;
 	}
 
-	/* --- Service features / phone hero --- */
+	/* About note callout */
+	.about-note {
+		padding: 14px 18px;
+		font-size: 0.95rem;
+	}
+
+	/* --- Contact phone hero --- */
 	.contact-phone-hero {
 		padding: 24px 16px;
 		border-radius: 20px;
 		margin-bottom: 30px;
+		overflow: hidden;
 	}
 
 	.phone-number-large {
@@ -285,6 +347,7 @@
 	.phone-number-text {
 		font-size: 2.4rem !important;
 		letter-spacing: 1px;
+		word-break: break-word;
 	}
 
 	.contact-phone-hero .phone-number-text {
@@ -293,11 +356,12 @@
 	}
 
 	.booking-notice h3 {
-		font-size: 1.2rem;
+		font-size: 1.1rem;
+		line-height: 1.4;
 	}
 
 	.booking-notice p {
-		font-size: 1rem;
+		font-size: 0.95rem;
 	}
 
 	.service-features {
@@ -340,24 +404,36 @@
 		margin-top: 5px;
 	}
 
-	/* --- Gallery --- */
+	/* --- Gallery grid --- */
 	.gallery-grid {
-		grid-template-columns: 1fr;
+		/* Single column on mobile; reset all bento overrides */
+		grid-template-columns: 1fr !important;
+		grid-template-rows: none !important;
 		gap: 12px;
 		padding: 0 16px;
 	}
 
 	.gallery-item {
+		/* Reset any bento column/row spans from tablet query */
+		grid-column: 1 / -1 !important;
+		grid-row: auto !important;
 		aspect-ratio: 16 / 10;
 		min-height: 200px;
 	}
 
+	/* Lightbox nav buttons float inside the image on mobile */
 	.lightbox-prev {
 		left: 8px;
 	}
 
 	.lightbox-next {
 		right: 8px;
+	}
+
+	/* Lightbox close button always visible */
+	.lightbox-close {
+		top: -48px;
+		right: 0;
 	}
 
 	/* Events gallery */
@@ -370,7 +446,7 @@
 		height: 180px;
 	}
 
-	/* --- Contact form --- */
+	/* --- Contact form + info --- */
 	.contact-container {
 		grid-template-columns: 1fr;
 		gap: 25px;
@@ -378,25 +454,36 @@
 	}
 
 	.contact-info {
-		padding: 24px 16px;
+		padding: 24px 18px;
 	}
 
 	.contact-form {
-		padding: 24px 16px;
+		padding: 24px 18px;
 	}
 
 	.form-buttons {
 		flex-direction: column;
 	}
 
+	/* Ensure form inputs don't overflow */
+	.form-group input,
+	.form-group textarea {
+		font-size: 16px; /* prevent iOS zoom on focus */
+	}
+
 	/* --- Service areas / maps --- */
 	.service-areas-map-container {
 		grid-template-columns: 1fr;
 		gap: 20px;
+		padding: 0 16px;
+	}
+
+	.map-wrapper {
+		padding: 10px;
 	}
 
 	.map-wrapper iframe {
-		height: 280px;
+		height: 260px;
 	}
 
 	.map-service-info {
@@ -423,7 +510,7 @@
 	}
 
 	.map-wrapper-static iframe {
-		height: 280px;
+		height: 260px;
 	}
 
 	.gta-coverage-info {
@@ -435,26 +522,33 @@
 	}
 
 	.coverage-list {
-		grid-template-columns: 1fr;
+		grid-template-columns: 1fr 1fr;
 		gap: 8px;
 	}
 
 	.coverage-list .coverage-item {
 		padding: 10px 12px;
+		font-size: 0.9rem;
 	}
 
 	.map-cta-box {
 		padding: 14px;
 	}
 
+	.map-cta-box p {
+		font-size: 0.95rem;
+	}
+
 	/* --- Vehicle modal --- */
 	.vehicle-modal-content {
 		padding: 20px 16px;
 		margin: 10px;
+		max-height: 90vh;
+		overflow-y: auto;
 	}
 
 	.vehicle-modal-header h2 {
-		font-size: 1.8rem;
+		font-size: 1.6rem;
 	}
 
 	.quote-phone-display {
@@ -485,8 +579,10 @@
 	/* --- Footer --- */
 	.footer-content {
 		flex-direction: column;
+		align-items: center;
 		text-align: center;
 		gap: 20px;
+		padding: 0;
 	}
 
 	footer {
@@ -497,6 +593,16 @@
 		flex-wrap: wrap;
 		justify-content: center;
 		gap: 8px 20px;
+	}
+
+	.footer-logo img {
+		height: 64px;
+	}
+
+	.footer-bottom {
+		font-size: 0.82rem;
+		padding: 20px 12px 0;
+		margin-top: 20px;
 	}
 
 	/* --- Sticky mobile call button --- */
@@ -532,6 +638,7 @@
 		width: 48px;
 		height: 48px;
 		font-size: 1.1rem;
+		border-radius: 12px;
 	}
 
 	.about-stats {
@@ -557,5 +664,112 @@
 
 	.call-text small {
 		font-size: 0.9rem;
+	}
+
+	/* Tighten map on very small landscape phones */
+	.map-wrapper iframe,
+	.map-wrapper-static iframe {
+		height: 220px;
+	}
+}
+
+/* ---- Extra-small phones (max 375px) ---- */
+@media (max-width: 375px) {
+	:root {
+		--header-height: 148px;
+	}
+
+	section {
+		padding: 45px 12px 40px;
+	}
+
+	.section-header h2 {
+		font-size: 1.6rem;
+	}
+
+	.section-desc {
+		font-size: 0.95rem;
+	}
+
+	/* Features */
+	.features-grid {
+		padding: 0 12px;
+	}
+
+	.feature-card .feature-icon {
+		height: 170px;
+	}
+
+	/* Services list */
+	.songs-grid {
+		padding: 0 12px;
+	}
+
+	.song-card {
+		padding: 14px 16px;
+		gap: 12px;
+	}
+
+	.song-card-title {
+		font-size: 1.1rem;
+	}
+
+	.song-card-meta {
+		font-size: 0.78rem;
+	}
+
+	/* About */
+	.about-grid {
+		padding: 0 12px;
+	}
+
+	/* Contact */
+	.contact-container,
+	.gta-map-container {
+		padding: 0 12px;
+	}
+
+	.contact-info,
+	.contact-form {
+		padding: 18px 14px;
+	}
+
+	/* Phone number — prevent overflow on 320px screens */
+	.phone-number-text {
+		font-size: 1.8rem !important;
+		letter-spacing: 0 !important;
+		word-break: break-word;
+	}
+
+	.contact-phone-hero .phone-number-text {
+		font-size: 2rem !important;
+	}
+
+	.booking-notice h3 {
+		font-size: 1rem;
+	}
+
+	/* Coverage list stays 2-col on 375px */
+	.coverage-list {
+		grid-template-columns: 1fr;
+	}
+
+	/* Sticky footer — slightly smaller */
+	.sticky-call-btn {
+		padding: 8px 14px;
+		gap: 8px;
+	}
+
+	.call-text strong {
+		font-size: 0.75rem;
+		letter-spacing: 1px;
+	}
+
+	.call-text small {
+		font-size: 0.85rem;
+	}
+
+	.footer-links {
+		gap: 6px 14px;
 	}
 }
