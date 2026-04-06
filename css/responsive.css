@@ -617,8 +617,10 @@
 		font-size: clamp(1.9rem, 10vw, 2.8rem);
 	}
 
-	.section-header h2 {
-		font-size: 1.75rem;
+	/* section-header h2 scales via clamp() in sections.css — no override needed */
+
+	.about-content h3 {
+		font-size: 1.7rem;
 	}
 
 	.phone-number-text {
@@ -683,8 +685,10 @@
 		padding: 45px 12px 40px;
 	}
 
-	.section-header h2 {
-		font-size: 1.6rem;
+	/* section-header h2 scales via clamp() — no hard override needed at 375px */
+
+	.about-content h3 {
+		font-size: 1.55rem;
 	}
 
 	.section-desc {

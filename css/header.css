@@ -197,6 +197,23 @@ header {
 	width: 70%;
 }
 
+/* Active page indicator */
+.nav-links a.active {
+	color: var(--gold);
+}
+
+.nav-links a.active::before {
+	width: 70%;
+}
+
+/* Keyboard focus ring for nav links — overrides global a:focus-visible */
+.nav-links a:focus-visible {
+	outline: none;
+	background: rgba(212, 175, 55, 0.1);
+	color: var(--gold);
+	border-radius: 0;
+}
+
 .nav-toggle {
 	display: none;
 	flex-direction: column;

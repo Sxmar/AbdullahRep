@@ -54,6 +54,12 @@
 	box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }
 
+.song-card:focus-visible {
+	outline: 2px solid rgba(212, 175, 55, 0.75);
+	outline-offset: 3px;
+	border-color: var(--gold);
+}
+
 .song-card:hover .song-card-duration {
 	color: var(--gold);
 	transform: scale(1.2);

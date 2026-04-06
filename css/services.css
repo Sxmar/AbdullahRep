@@ -280,6 +280,13 @@
 	box-shadow: 0 0 30px rgba(212, 175, 55, 0.45);
 }
 
+.play-btn:focus-visible,
+.nav-btn:focus-visible,
+.control-btn:focus-visible {
+	outline: 2px solid rgba(212, 175, 55, 0.75);
+	outline-offset: 3px;
+}
+
 .nav-btn {
 	width: 36px;
 	height: 36px;

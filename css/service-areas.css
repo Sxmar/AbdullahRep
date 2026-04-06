@@ -119,6 +119,11 @@
 	transform: scale(1.02);
 }
 
+.map-cta:focus-visible {
+	outline: 2px solid rgba(212, 175, 55, 0.8);
+	outline-offset: 3px;
+}
+
 /* GTA Map Section on Contact Page */
 .service-area-section {
 	margin-top: 80px;

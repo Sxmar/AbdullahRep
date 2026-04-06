@@ -66,13 +66,15 @@
 }
 
 .contact-item-content a {
-	color: var(--text-muted);
+	color: var(--gold);
 	text-decoration: none;
-	transition: color 0.3s ease;
+	transition: color 0.3s ease, opacity 0.3s ease;
+	font-weight: 500;
 }
 
 .contact-item-content a:hover {
-	color: var(--gold);
+	color: var(--gold-light);
+	opacity: 0.9;
 }
 
 .contact-map {
@@ -94,6 +96,14 @@
 	border: 1px solid var(--glass-border);
 	border-radius: 24px;
 	padding: 40px;
+}
+
+/* Contact form panel heading — mirrors contact-info h3 */
+.contact-form h3 {
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 1.8rem;
+	color: var(--gold-light);
+	margin-bottom: 25px;
 }
 
 .form-group {
@@ -167,6 +177,13 @@
 	transform: translateY(-3px);
 	box-shadow: 0 12px 35px rgba(212, 175, 55, 0.4);
 	background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 100%);
+}
+
+.btn-submit:focus-visible,
+.btn-clear:focus-visible,
+.submit-btn:focus-visible {
+	outline: 2px solid rgba(212, 175, 55, 0.8);
+	outline-offset: 3px;
 }
 
 .btn-clear {
